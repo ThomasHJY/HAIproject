@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Home from './source/screen/home'; //홈페이지
-import Building09 from './source/screen/building09';
+import Building09 from './source/screen/building09'; //9번 건물
 
 const Stack = createNativeStackNavigator();
 
