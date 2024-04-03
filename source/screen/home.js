@@ -1,9 +1,15 @@
 import React from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {View, ScrollView, StyleSheet, Button} from 'react-native';
 
 const Home = ({navigation}) => {
     return (
-        <ScrollView>
+        <ScrollView style = {style.view_building}>
+            <View style = {view_building__row}>
+                <Button/>
+                <Button/>
+                <Button/>
+                <Button/>
+            </View>
         </ScrollView>
     );
   };
@@ -11,5 +17,11 @@ const Home = ({navigation}) => {
   export default Home;
 
   const style = StyleSheet.create({
-    
+    view_building: {
+        flex: 1,
+    },
+    view_building_row: {
+        flex: 1,
+        flexDirection: 'row',
+    },
   });
