@@ -4,7 +4,7 @@ import {View, ScrollView, StyleSheet, Button} from 'react-native';
 const Home = ({navigation}) => {
     return (
         <ScrollView style = {style.view_building}>
-            <View style = {view_building__row}>
+            <View style = {style.view_building_row}>
                 <Button/>
                 <Button/>
                 <Button/>
