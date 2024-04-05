@@ -1,9 +1,10 @@
 import React from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {Text, ScrollView, StyleSheet} from 'react-native';
 
 const Building09 = ({navigation}) => {
     return (
         <ScrollView>
+            <Text>공과대학 페이지</Text>
         </ScrollView>
     );
   };
