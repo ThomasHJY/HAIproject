@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 const Search = ({navigation}) => {
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.95, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.925, justifyContent: 'space-between'}}>
                 <View style = {{flex: 1}}>
                     <Text>검색 페이지</Text>
                 </View>

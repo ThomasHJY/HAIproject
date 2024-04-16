@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
 
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.95, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.925, justifyContent: 'space-between'}}>
                 <ScrollView style = {{flex: 1, backgroundColor: '#ffffff'}} contentContainerStyle = {style.container}>
                     <TouchableOpacity 
                         style = {style.building}
