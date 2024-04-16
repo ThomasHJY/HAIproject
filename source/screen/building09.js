@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 const Building09 = ({navigation}) => {
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.95, justifyContent: 'space-between'}}>
                 <View style = {{flex: 1}}>
                     <Text>공과대학 페이지</Text>
                 </View>
