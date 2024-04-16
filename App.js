@@ -151,7 +151,7 @@ export default SchoolMapScreen;
 
 const style = StyleSheet.create({
   titleContainer: {
-    width: windowWidth * 0.6,
+    width: windowWidth * 0.7,
     height: 50,
     flexDirection: 'row',
     alignItems: 'center',
