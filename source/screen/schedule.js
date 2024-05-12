@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 const Schedule = ({navigation}) => {
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {style.container}>
                 <View style = {{flex: 1}}>
                     <Text>시간표 페이지</Text>
                 </View>
@@ -23,5 +23,9 @@ const Schedule = ({navigation}) => {
   export default Schedule;
 
   const style = StyleSheet.create({
-    
+    container: {
+        width: windowWidth, 
+        height: windowHeight, 
+        justifyContent: 'space-between',
+    },
   });
