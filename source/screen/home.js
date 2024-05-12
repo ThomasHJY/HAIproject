@@ -14,8 +14,8 @@ const Home = ({navigation}) => {
 
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
-                <ScrollView style = {{flex: 1, backgroundColor: '#ffffff'}} contentContainerStyle = {style.container}>
+            <SafeAreaView style = {style.container}>
+                <ScrollView style = {style.outerContainer} contentContainerStyle = {style.innerContainer}>
                     <TouchableOpacity 
                         style = {style.building}
                         onPress = {(pressButton09)}
@@ -48,6 +48,15 @@ const Home = ({navigation}) => {
 
   const style = StyleSheet.create({
     container: {
+        width: windowWidth, 
+        height: windowHeight, 
+        justifyContent: 'space-between',
+    },
+    outerContainer: {
+        flex: 1,
+        backgroundColor: '#ffffff',
+    },
+    innerContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'flex-start',
