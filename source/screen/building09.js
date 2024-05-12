@@ -10,8 +10,8 @@ const windowHeight = Dimensions.get('window').height;
 const Building09 = ({navigation}) => {
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
-                <ScrollView style = {{flex: 1, backgroundColor: '#ffffff'}} contentContainerStyle = {style.container}>
+            <SafeAreaView style = {style.container}>
+                <ScrollView style = {style.outerContainer} contentContainerStyle = {style.innerContainer}>
                     <TouchableOpacity
                         style = {style.floor}
                     >
@@ -149,6 +149,15 @@ const Building09 = ({navigation}) => {
 
   const style = StyleSheet.create({
     container: {
+        width: windowWidth, 
+        height: windowHeight, 
+        justifyContent: 'space-between',
+    },
+    outerContainer: {
+        flex: 1,
+        backgroundColor: '#ffffff',
+    },
+    innerContainer: {
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'stretch',
