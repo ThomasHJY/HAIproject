@@ -14,7 +14,7 @@ const Bottombar = ({n}) => {
     return (
         <View style = {style.bottomBar}>
             <TouchableOpacity 
-                style = {{flex: 1}}
+                style = {style.bottomButton}
                 onPress = {(pressHome)}
             >
                 <Image
@@ -23,7 +23,7 @@ const Bottombar = ({n}) => {
                 />
             </TouchableOpacity>
             <TouchableOpacity 
-                style = {{flex: 1}}
+                style = {style.bottomButton}
                 onPress = {(pressSearch)}
             >
                 <Image
@@ -32,7 +32,7 @@ const Bottombar = ({n}) => {
                 />
             </TouchableOpacity>
             <TouchableOpacity 
-                style = {{flex: 1}}
+                style = {style.bottomButton}
                 onPress = {(pressSchedule)}
             >
                 <Image
@@ -41,7 +41,7 @@ const Bottombar = ({n}) => {
                 />
             </TouchableOpacity>
             <TouchableOpacity 
-                style = {{flex: 1}}
+                style = {style.bottomButton}
                 onPress = {(pressGps)}
             >
                 <Image
@@ -50,7 +50,7 @@ const Bottombar = ({n}) => {
                 />
             </TouchableOpacity>
             <TouchableOpacity 
-                style = {{flex: 1}}
+                style = {style.bottomButton}
                 onPress = {(pressNotice)}
             >
                 <Image
@@ -66,14 +66,19 @@ const Bottombar = ({n}) => {
 
   const style = StyleSheet.create({
     bottomBar: {
+        backgroundColor: '#ffffff',
         width: windowWidth,
-        height: windowHeight * 0.075,
+        height: windowHeight * 0.08,
         flexDirection: 'row',
+    },
+    bottomButton: {
+        flex: 1,
+        alignItems: 'center',
     },
     bottomImage: {
         flex: 1,
-        resizeMode: 'stretch',
-        width: 'auto',
+        resizeMode: 'contain',
+        width: '50%',
         height: 'auto',
     },
   });
