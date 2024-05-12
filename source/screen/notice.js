@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 const Notice = ({navigation}) => {
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {style.container}>
                 <View style = {{flex: 1}}>
                     <Text>공지 사항 페이지</Text>
                 </View>
@@ -23,5 +23,9 @@ const Notice = ({navigation}) => {
   export default Notice;
 
   const style = StyleSheet.create({
-    
+    container: {
+        width: windowWidth, 
+        height: windowHeight, 
+        justifyContent: 'space-between',
+    },
   });
