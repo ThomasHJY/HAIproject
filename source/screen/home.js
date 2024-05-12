@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
 
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.925, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
                 <ScrollView style = {{flex: 1, backgroundColor: '#ffffff'}} contentContainerStyle = {style.container}>
                     <TouchableOpacity 
                         style = {style.building}
@@ -65,21 +65,10 @@ const Home = ({navigation}) => {
         height: 'auto'
     },
     buildingText: {
-        fontSize: 10,
+        fontSize: 15,
         color: '#000000',
         width: 'auto',
         height: 'auto',
         alignSelf: 'center',
-    },
-    bottomBar: {
-        width: windowWidth,
-        height: windowHeight * 0.075,
-        flexDirection: 'row',
-    },
-    bottomImage: {
-        flex: 1,
-        resizeMode: 'stretch',
-        width: 'auto',
-        height: 'auto',
     },
   });
