@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 const Gps = ({navigation}) => {
     return (
         <SafeAreaProvider>
-            <SafeAreaView style = {{width: windowWidth, height: windowHeight * 0.9, justifyContent: 'space-between'}}>
+            <SafeAreaView style = {style.container}>
                 <View style = {{flex: 1}}>
                     <Text>내비게이션 페이지</Text>
                 </View>
@@ -23,5 +23,9 @@ const Gps = ({navigation}) => {
   export default Gps;
 
   const style = StyleSheet.create({
-    
+    container: {
+        width: windowWidth, 
+        height: windowHeight, 
+        justifyContent: 'space-between',
+    },
   });
