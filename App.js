@@ -136,7 +136,7 @@ const SchoolMapScreen = () => {
                   ellipsizeMode='tail'
                   style = {style.headerText}
                 >
-                  56주년 기념관(법정대학, 특수대학원)
+                  56주년 기념관
                 </Text>
               </View>
             ),
