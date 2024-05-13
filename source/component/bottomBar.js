@@ -68,18 +68,18 @@ const Bottombar = ({n}) => {
     bottomBar: {
         backgroundColor: '#ffffff',
         width: windowWidth,
-        height: windowHeight * 0.175,
+        height: windowHeight * 0.15,
         flexDirection: 'row',
     },
     bottomButton: {
         flex: 1,
-        height: '45%',
+        height: '50%',
         alignItems: 'center',
     },
     bottomImage: {
         flex: 1,
         resizeMode: 'contain',
-        width: '45%',
+        width: '50%',
         height: 'auto',
     },
   });
