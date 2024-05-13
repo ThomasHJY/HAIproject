@@ -138,6 +138,20 @@ const Building09 = ({navigation}) => {
                             </Text>
                         </View>
                     </TouchableOpacity>
+                    <TouchableOpacity
+                        style = {style.floor}
+                    >
+                        <View style = {style.floorNumber}>
+                            <Text style = {style.numberText}>
+                                10F
+                            </Text>
+                        </View>
+                        <View style = {style.floorInfo}>
+                            <Text style = {style.infoText}>
+                                전공실습실8
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
                 </ScrollView>
                 <Bottombar n = {navigation}/>
             </SafeAreaView>
@@ -188,9 +202,11 @@ const Building09 = ({navigation}) => {
         fontSize: 30,
         fontWeight: 'bold',
         color: '#a52a2a',
+        textAlign: 'center',
     },
     infoText: {
         fontSize: 15,
         color: '#000000',
+        textAlign: 'center',
     },
   });
