@@ -24,7 +24,7 @@ const Home = ({navigation}) => {
                             style = {style.buildingImage}
                             source = {require('../image/building09.jpg')}
                         />
-                        <Text style = {style.buildingText}>공과대학</Text>
+                        <Text numberOfLines={2} style = {style.buildingText}>공과대학</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity 
@@ -35,7 +35,7 @@ const Home = ({navigation}) => {
                             style = {style.buildingImage}
                             source = {require('../image/building56.jpg')}
                         />
-                        <Text style = {style.buildingText}>56주년 기념관</Text>
+                        <Text numberOfLines={2} style = {style.buildingText}>56주년 기념관</Text>
                     </TouchableOpacity>
                 </ScrollView>
                 <Bottombar n = {navigation}/> 
@@ -70,14 +70,14 @@ const Home = ({navigation}) => {
     buildingImage: {
         flex: 1,
         resizeMode: 'stretch',
-        width: 'auto',
+        width: '100%',
         height: 'auto'
     },
     buildingText: {
-        fontSize: 15,
+        fontSize: windowHeight * 0.25 * 0.2 * 0.25,
         color: '#000000',
-        width: 'auto',
-        height: 'auto',
-        alignSelf: 'center',
+        width: '100%',
+        height: '20%',
+        textAlign: 'center',
     },
   });
