@@ -90,9 +90,11 @@ const Building56 = ({navigation}) => {
         fontSize: 30,
         fontWeight: 'bold',
         color: '#a52a2a',
+        textAlign: 'center',
     },
     infoText: {
         fontSize: 15,
         color: '#000000',
+        textAlign: 'center',
     },
   });
