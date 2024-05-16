@@ -26,8 +26,8 @@ const Bottombar = ({n}) => {
     return (
         <GestureHandlerRootView style = {style.bottomContainer}>
             <GestureDetector gesture = {pan}>
-                <Animated.View style = {style.bottomView}>
-
+                <Animated.View style = {[style.bottomView, animatedStyle]}>
+                    <Text>hello</Text>
                 </Animated.View>
             </GestureDetector>
             <View style = {style.bottomBar}>
@@ -68,19 +68,22 @@ const Bottombar = ({n}) => {
   const style = StyleSheet.create({
     bottomContainer: {
         width: windowWidth,
-        height: windowHeight * 0.3,
-        backgroundColor: 'blue',
+        height: windowHeight,
+        position: 'absolute',
+        top: windowHeight * 0.8,
     },
     bottomView: {
         width: windowWidth,
-        height: windowHeight * 0.1,
+        height: windowHeight,
+        position: 'absolute',
+        backgroundColor: 'blue',
     },
     bottomBar: {
         backgroundColor: '#ffffff',
         width: windowWidth,
         height: windowHeight * 0.15,
         flexDirection: 'row',
-        backgroundColor: 'red',
+        top: 35,
     },
     bottomButton: {
         flex: 1,
