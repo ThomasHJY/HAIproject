@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Image, ScrollView, StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
+import {View, Text, Image, ScrollView, StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 //UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a> 하단 버튼 이미지 출처
 
@@ -9,8 +9,36 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const Home = ({navigation}) => {
+    const pressSearch = () => navigation.navigate('Searchpage');
+    const pressSchedule = () => navigation.navigate('Schedulepage');
     const pressButton09 = () => navigation.navigate('College of Engineering');
     const pressButton56 = () => navigation.navigate('56th Anniversary Memorial Hall');
+    React.useEffect(() => {
+        navigation.setOptions({
+            headerRight: () => (
+                <View style = {style.rightContainer}>
+                <TouchableOpacity 
+                  style = {style.searchButton}
+                  onPress = {pressSearch}
+                >
+                  <Image
+                    style = {style.searchImage}
+                    source = {require('../image/button2.jpg')}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity 
+                  style = {style.searchButton}
+                  onPress = {pressSchedule}
+                >
+                  <Image
+                    style = {style.searchImage}
+                    source = {require('../image/button3.jpg')}
+                  />
+                </TouchableOpacity>
+              </View>
+            )
+        });
+    });
 
     return (
         <SafeAreaProvider>
@@ -47,10 +75,24 @@ const Home = ({navigation}) => {
   export default Home;
 
   const style = StyleSheet.create({
+    rightContainer: {
+        width: windowWidth * 0.3,
+        height: 50,
+        flexDirection: 'row',
+      },
+      searchButton: {
+        width: '50%',
+        height: '100%',
+        justifyContent: 'center',
+      },
+      searchImage: {
+        width: '100%',
+        height: '60%',
+        resizeMode: 'center',
+      },
     container: {
-        width: windowWidth, 
-        height: windowHeight, 
-        justifyContent: 'space-between',
+        width: windowWidth,
+        height: windowHeight,
     },
     outerContainer: {
         flex: 1,
@@ -59,7 +101,6 @@ const Home = ({navigation}) => {
     innerContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'flex-start',
         flexWrap: 'wrap',
         gap: 40,
         },
@@ -71,7 +112,7 @@ const Home = ({navigation}) => {
         flex: 1,
         resizeMode: 'stretch',
         width: '100%',
-        height: 'auto'
+        height: '100%'
     },
     buildingText: {
         fontSize: windowHeight * 0.25 * 0.2 * 0.25,

@@ -53,22 +53,18 @@ const Building56 = ({navigation}) => {
     container: {
         width: windowWidth, 
         height: windowHeight, 
-        justifyContent: 'space-between',
     },
     outerContainer: {
         flex: 1,
         backgroundColor: '#ffffff',
     },
     innerContainer: {
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'stretch',
+        
         },
     floor: {
         width: windowWidth,
         height: windowHeight * 0.1,
         flexDirection: 'row',
-        justifyContent: 'space-around',
         alignItems: 'center',
         gap: 10,
     },
@@ -76,7 +72,6 @@ const Building56 = ({navigation}) => {
         flex: 1.5,
         height: '75%',
         justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#deb887',
     },
     floorInfo: {
@@ -95,6 +90,5 @@ const Building56 = ({navigation}) => {
     infoText: {
         fontSize: 15,
         color: '#000000',
-        textAlign: 'center',
     },
   });

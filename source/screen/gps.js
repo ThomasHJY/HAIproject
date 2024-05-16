@@ -26,6 +26,5 @@ const Gps = ({navigation}) => {
     container: {
         width: windowWidth, 
         height: windowHeight, 
-        justifyContent: 'space-between',
     },
   });

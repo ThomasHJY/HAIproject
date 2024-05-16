@@ -1,20 +1,26 @@
 import React from 'react';
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions} from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-
-import Bottombar from '../component/bottomBar'; //하단 버튼 바
+import { SearchBar } from '@rneui/themed'; //검색 라이브러리
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const Search = ({navigation}) => {
+    const [text, onChangeText] = React.useState('');
+
     return (
         <SafeAreaProvider>
             <SafeAreaView style = {style.container}>
-                <View style = {{flex: 1}}>
-                    <Text>검색 페이지</Text>
+                <View style = {style.inputContainer}>
+                    <SearchBar
+                        containerStyle = {style.inputBar1}
+                        inputContainerStyle = {style.inputBar2}
+                        placeholder='강의실 번호 입력 (ex: 090425)'
+                        onChangeText = {onChangeText}
+                        value = {text}
+                    />
                 </View>
-                <Bottombar n = {navigation}/>
             </SafeAreaView>
         </SafeAreaProvider>
     );
@@ -25,7 +31,23 @@ const Search = ({navigation}) => {
   const style = StyleSheet.create({
     container: {
         width: windowWidth, 
-        height: windowHeight, 
-        justifyContent: 'space-between',
+        height: windowHeight,
+        backgroundColor: '#ffffff',
+    },
+    inputContainer: {
+        width: windowWidth,
+        height: windowHeight * 0.08,
+        justifyContent: 'center',
+    },
+    inputBar1: {
+        width: '100%',
+        height: '100%',
+        borderColor: '#d3d3d3',
+        backgroundColor: '#d3d3d3',
+    },
+    inputBar2: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: '#ffffff',
     },
   });

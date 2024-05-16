@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -20,7 +20,7 @@ const SchoolMapScreen = () => {
       <Stack.Navigator 
         initialRouteName = 'Homepage'
         screenOptions={{
-          headerStyle: {backgroundColor: '#ffffff', width: windowWidth},
+          headerStyle: {width: windowWidth, backgroundColor: '#ffffff'},
           headerTitleAlign: 'center',
         }}
       >
@@ -28,13 +28,17 @@ const SchoolMapScreen = () => {
           name = 'Homepage'
           component = {Home}
           options = {{
-            headerTitleAlign: 'left',
+            headerTitleAlign: 'center',
+            headerLeft: () => (
+              <View style = {style.leftContainer}>
+                  <Image
+                    style = {style.headerImage}
+                    source = {require('./source/image/symbol.jpg')}
+              />
+              </View>
+            ),
             headerTitle: () => (
               <View style = {style.titleContainer}>
-                <Image
-                  style = {style.headerImage}
-                  source = {require('./source/image/symbol.jpg')}
-                />
                 <Text style = {style.headerText}>HAI GPS</Text>
               </View>
             ),
@@ -150,19 +154,24 @@ const SchoolMapScreen = () => {
 export default SchoolMapScreen;
 
 const style = StyleSheet.create({
-  titleContainer: {
-    width: windowWidth * 0.7,
+  leftContainer: {
+    width: windowWidth * 0.1,
     height: 50,
-    flexDirection: 'row',
-    alignItems: 'center',
   },
   headerImage: {
-    width: windowWidth * 0.3,
+    width: 'auto',
+    height: '100%',
     aspectRatio: 1,
-    resizeMode: 'center',
+    resizeMode: 'contain',
+  },
+  titleContainer: {
+    width: windowWidth * 0.6,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   headerText: {
     color: '#000000',
-    fontSize: 20,
+    fontSize: 30,
   },
 });
