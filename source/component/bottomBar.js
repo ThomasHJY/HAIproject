@@ -23,7 +23,7 @@ const Bottombar = ({n}) => {
     })
     .onUpdate((event) => {
       positionY.value = clamp(
-        prevPositionY.value + event.translationY, -windowHeight * 0.75, windowHeight * 0.05
+        prevPositionY.value + event.translationY, -windowHeight * 0.8, windowHeight * 0.01
       );
     })
     .runOnJS(true);
@@ -97,7 +97,7 @@ const Bottombar = ({n}) => {
         width: windowWidth,
         height: windowHeight,
         backgroundColor: 'grey',
-        bottom: windowHeight * 0.1,
+        bottom: windowHeight * 0.05,
     },
     bottomBar: {
         backgroundColor: '#ffffff',
@@ -105,6 +105,7 @@ const Bottombar = ({n}) => {
         height: windowHeight * 0.065,
         position: 'absolute',
         flexDirection: 'row',
+        top: 11,
     },
     bottomButton: {
         flex: 1,

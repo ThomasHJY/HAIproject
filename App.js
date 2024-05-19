@@ -13,6 +13,7 @@ import Building56 from './source/screen/building56'; //56번 건물
 
 const Stack = createNativeStackNavigator();
 const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const SchoolMapScreen = () => {
   return (
@@ -172,6 +173,6 @@ const style = StyleSheet.create({
   },
   headerText: {
     color: '#000000',
-    fontSize: 30,
+    fontSize: windowHeight * 0.25 * 0.2 * 0.6,
   },
 });
