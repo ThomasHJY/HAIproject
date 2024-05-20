@@ -5,7 +5,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Gps = () => {
+const Notice = () => {
     return (
         <SafeAreaProvider>
             <SafeAreaView style = {style.container}>
@@ -17,7 +17,7 @@ const Gps = () => {
     );
   };
   
-  export default Gps;
+  export default Notice;
 
   const style = StyleSheet.create({
     container: {

@@ -8,7 +8,7 @@ import Bottombar from '../component/bottomBar'; //하단 버튼 바
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Building56 = ({navigation}) => {
+const Building56 = () => {
    return (
         <SafeAreaProvider>
             <SafeAreaView style = {style.container}>
@@ -43,7 +43,7 @@ const Building56 = ({navigation}) => {
                         </View>
                     </TouchableOpacity>
                 </ScrollView>
-                <Bottombar n = {{navigation}}/>
+                <Bottombar/>
             </GestureHandlerRootView>
             </SafeAreaView>
         </SafeAreaProvider>

@@ -48,7 +48,7 @@ const Home = ({navigation}) => {
                 <ScrollView style = {style.outerContainer} contentContainerStyle = {style.innerContainer}>
                     <TouchableOpacity 
                         style = {style.building}
-                        onPress = {(pressButton09)}
+                        onPress = {pressButton09}
                     >
                         <Image 
                             style = {style.buildingImage}
@@ -59,7 +59,7 @@ const Home = ({navigation}) => {
 
                     <TouchableOpacity 
                         style = {style.building}
-                        onPress = {(pressButton56)}
+                        onPress = {pressButton56}
                     >
                         <Image
                             style = {style.buildingImage}
@@ -68,7 +68,7 @@ const Home = ({navigation}) => {
                         <Text numberOfLines={2} style = {style.buildingText}>56주년 기념관</Text>
                     </TouchableOpacity>
                 </ScrollView>
-                <Bottombar n = {{navigation}}/> 
+                <Bottombar/> 
             </GestureHandlerRootView>
             </SafeAreaView>
         </SafeAreaProvider>
