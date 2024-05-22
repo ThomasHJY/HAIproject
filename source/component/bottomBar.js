@@ -107,7 +107,7 @@ const Bottombar = () => {
         height: windowHeight * 0.065,
         position: 'absolute',
         flexDirection: 'row',
-        top: 12,
+        top: 15,
     },
     bottomButton: {
         flex: 1,

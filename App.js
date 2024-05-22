@@ -2,6 +2,8 @@ import React from 'react';
 import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {RecoilRoot} from 'recoil';
+import {Provider as PaperProvider} from 'react-native-paper';
 
 import Home from './source/screen/home'; //홈페이지
 import Search from './source/screen/search'; //검색
@@ -15,8 +17,18 @@ const Stack = createNativeStackNavigator();
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+const HeaderTitle = React.memo(({text}) => (
+  <View style={style.titleContainer}>
+    <Text numberOfLines={1} ellipsizeMode="tail" style={style.headerText}>
+      {text}
+    </Text>
+  </View>
+));
+
 const SchoolMapScreen = () => {
   return (
+    <RecoilRoot>
+    <PaperProvider>
     <NavigationContainer>
       <Stack.Navigator 
         initialRouteName = 'Homepage'
@@ -49,106 +61,48 @@ const SchoolMapScreen = () => {
           name = 'Searchpage'
           component = {Search}
           options = {{
-            headerTitle: () => (
-              <View style = {style.titleContainer}>
-                <Text 
-                  numberOfLines={1} 
-                  ellipsizeMode='tail'
-                  style = {style.headerText}
-                >
-                  검색
-                </Text>
-              </View>
-            ),
+            headerTitle: () => <HeaderTitle text="검색" />,
           }}
         />
         <Stack.Screen
           name = 'Schedulepage'
           component = {Schedule}
           options = {{
-            headerTitle: () => (
-              <View style = {style.titleContainer}>
-                <Text 
-                  numberOfLines={1} 
-                  ellipsizeMode='tail'
-                  style = {style.headerText}
-                >
-                  시간표
-                </Text>
-              </View>
-            ),
+            headerTitle: () => <HeaderTitle text="시간표" />,
           }}
         />
         <Stack.Screen
           name = 'Gpspage'
           component = {Gps}
           options = {{
-            headerTitle: () => (
-              <View style = {style.titleContainer}>
-                <Text 
-                  numberOfLines={1} 
-                  ellipsizeMode='tail'
-                  style = {style.headerText}
-                >
-                  내비게이션
-                </Text>
-              </View>
-            ),
+            headerTitle: () => <HeaderTitle text="내비게이션" />,
           }}
         />
         <Stack.Screen
           name = 'Noticepage'
           component = {Notice}
           options = {{
-            headerTitle: () => (
-              <View style = {style.titleContainer}>
-                <Text 
-                  numberOfLines={1} 
-                  ellipsizeMode='tail'
-                  style = {style.headerText}
-                >
-                  공지 사항
-                </Text>
-              </View>
-            ),
+            headerTitle: () => <HeaderTitle text="공지 사항" />,
           }}
         />
         <Stack.Screen
           name = 'College of Engineering'
           component = {Building09}
           options = {{
-            headerTitle: () => (
-              <View style = {style.titleContainer}>
-                <Text 
-                  numberOfLines={1} 
-                  ellipsizeMode='tail'
-                  style = {style.headerText}
-                >
-                  공과대학
-                </Text>
-              </View>
-            ),
+            headerTitle: () => <HeaderTitle text="공과대학" />,
           }}
         />
         <Stack.Screen
           name = '56th Anniversary Memorial Hall'
           component = {Building56}
           options = {{
-            headerTitle: () => (
-              <View style = {style.titleContainer}>
-                <Text 
-                  numberOfLines={1} 
-                  ellipsizeMode='tail'
-                  style = {style.headerText}
-                >
-                  56주년 기념관
-                </Text>
-              </View>
-            ),
+            headerTitle: () => <HeaderTitle text="56주년 기념관" />,
           }}
         />
       </Stack.Navigator>
     </NavigationContainer>
+    </PaperProvider>
+    </RecoilRoot>
   );
 };
 
